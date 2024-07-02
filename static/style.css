@@ -1,0 +1,26 @@
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+textarea {
+  display: block;
+  max-width: 100%;
+  min-width: 120px;
+  min-height: 100px;
+  max-height: 200px;
+}
