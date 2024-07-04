@@ -1,11 +1,18 @@
+@import 'form.css';
+@import 'rating-star.css';
+
 :root {
   --color-white: #ffffff;
   --color-purple-800: #20004f;
   --color-purple-600: #371587;
   --color-purple-400: #3f01b1;
+  --color-purple-50: #AD91E1;
 
   --border-radius-s: 0.5rem;
   --border-radius-m: 1rem;
+
+  --star-color: #dddddd;
+  --star-color-hover: #ffa500;
 }
 
 body {
@@ -23,32 +30,6 @@ main {
   margin: 0 auto 4rem;
 }
 
-button {
-  padding: 0.5rem 1rem;
-
-  border-radius: var(--border-radius-s);
-
-  cursor: pointer;
-}
-
-textarea {
-  display: block;
-  max-width: 100%;
-  min-width: 120px;
-  min-height: 100px;
-  max-height: 200px;
-
-  padding: 0.5rem;
-
-  color: var(--color-purple-400);
-  background-color: var(--color-white);
-
-  border-radius: var(--border-radius-s);
-}
-
-textarea::placeholder {
-  color: var(--color-purple-400);
-}
 
 .site__title {
   color: var(--color-white);
@@ -98,10 +79,6 @@ textarea::placeholder {
   flex-direction: column;
 
   gap: 1rem;
-}
-
-.review__form label {
-  color: var(--color-white);
 }
 
 .review__listing {
