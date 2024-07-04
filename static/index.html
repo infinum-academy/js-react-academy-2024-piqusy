@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Movies APP</title>
     <link href="./../static/style.css" rel="stylesheet">
-    <script src="./../static/index.js"></script>
   </head>
   <body>
     <main>
@@ -62,10 +61,10 @@
 
           </div>
 
-          <button type="submit">Post</button>
+          <button onclick="addReview()">Post</button>
       </section>
 
-      <section class="review__listing">
+      <section id="review-listing" class="review__listing">
 
         <div class="review__single">
           <div class="review__comment">
@@ -74,7 +73,7 @@
             <p>Ullamco occaecat occaecat reprehenderit non. Lorem non reprehenderit velit aliquip velit eu. Aliqua commodo voluptate non pariatur est aute adipisicing sunt. Occaecat commodo commodo ex. Velit dolore ea esse sit officia laborum proident deserunt.</p>
           </div>
 
-          <div class="reviw__rating">
+          <div class="review__rating">
             <p>Rating: <span>2/5</span></p>
           </div>
         </div>
@@ -86,7 +85,7 @@
             <p>Commodo cillum cillum eiusmod tempor consequat sint labore nisi proident officia cupidatat aute. Anim ea dolor eu tempor proident. Proident enim velit aliquip fugiat amet aliquip id amet labore. Labore dolore tempor aute. Sit esse sint sint id irure exercitation duis.</p>
           </div>
 
-          <div class="reviw__rating">
+          <div class="review__rating">
             <p>Rating: <span>4/5</span></p>
           </div>
         </div>
@@ -96,7 +95,7 @@
             <p>Ipsum anim exercitation commodo mollit sunt ut. Et magna minim consectetur duis Lorem et esse est aliquip deserunt. Deserunt nisi laborum aute nulla. Excepteur et aliqua dolor quis tempor et nostrud enim velit eu labore. Velit nostrud ad ut aliqua incididunt minim excepteur consectetur fugiat ea ex id laboris. Cillum adipisicing esse nostrud veniam sit nisi mollit velit irure eiusmod et magna commodo. Tempor culpa minim irure aute Lorem consequat minim esse pariatur aliqua qui veniam.</p>
           </div>
 
-          <div class="reviw__rating">
+          <div class="review__rating">
             <p>Rating: <span>5/5</span></p>
           </div>
         </div>
@@ -106,12 +105,13 @@
             <p>Lorem dolore duis enim ad quis mollit ex nulla sint nisi ullamco. Aliqua anim laboris adipisicing ex ad ex. Nisi reprehenderit ea dolor dolor. Et pariatur mollit eiusmod nostrud cupidatat veniam. Ex cillum ipsum deserunt dolore nisi nostrud minim ad duis. Nostrud cillum mollit deserunt dolore est excepteur nostrud adipisicing labore reprehenderit nisi deserunt aliqua aliquip.</p>
           </div>
 
-          <div class="reviw__rating">
+          <div class="review__rating">
             <p>Rating: <span>3/5</span></p>
           </div>
         </div>
 
       </section>
     </main>
+    <script src="./../static/index.js"></script>
   </body>
 </html>

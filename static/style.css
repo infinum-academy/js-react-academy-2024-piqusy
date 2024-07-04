@@ -88,6 +88,7 @@ main {
 }
 
 .review__single {
+  white-space: pre-wrap;
   color: var(--color-white);
   background-color: var(--color-purple-600);
 
