@@ -6,7 +6,7 @@
   --color-purple-800: #20004f;
   --color-purple-600: #371587;
   --color-purple-400: #3f01b1;
-  --color-purple-50: #AD91E1;
+  --color-purple-50: #ad91e1;
 
   --border-radius-s: 0.5rem;
   --border-radius-m: 1rem;
@@ -29,7 +29,6 @@ main {
   max-width: 80%;
   margin: 0 auto 4rem;
 }
-
 
 .site__title {
   color: var(--color-white);
@@ -106,11 +105,27 @@ main {
   border-radius: var(--border-radius-m);
 }
 
-.review__rating {
+.review__rating-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+
   margin-block-start: 2rem;
+}
+
+.review__star-wrapper {
+  display: flex;
+  gap: 4px;
+}
+
+.review__star--active {
+  --star-color: var(--star-color-hover);
 }
 
 .review__delete {
   display: block;
+
+  margin-block-start: 2rem;
   margin-inline-start: auto;
 }

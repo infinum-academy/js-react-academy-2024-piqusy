@@ -20,9 +20,24 @@ function createReviewElement(review) {
   reviewSingleComment.classList.add('review__comment');
   reviewSingleComment.innerHTML = review.content;
 
+  const reviewSingleRatingWrapper = document.createElement('div');
+  reviewSingleRatingWrapper.classList.add('review__rating-wrapper');
+
   const reviewSingleRating = document.createElement('div');
   reviewSingleRating.classList.add('review__rating');
   reviewSingleRating.textContent = `Rating: ${review.rating} / 5`;
+
+  const reviewSingleStarWrapper = document.createElement('div');
+  reviewSingleStarWrapper.classList.add('review__star-wrapper');
+
+  for (let i = 0; i < 5; i++) {
+    const star = document.createElement('span');
+    star.classList.add('rating__star');
+    if (i < review.rating) {
+      star.classList.add('review__star--active');
+    }
+    reviewSingleStarWrapper.appendChild(star);
+  }
 
   const reviewSingleDeleteButton = document.createElement('button');
   reviewSingleDeleteButton.classList.add('review__delete');
@@ -34,7 +49,9 @@ function createReviewElement(review) {
   });
 
   reviewSingleElement.appendChild(reviewSingleComment);
-  reviewSingleElement.appendChild(reviewSingleRating);
+  reviewSingleElement.appendChild(reviewSingleRatingWrapper);
+  reviewSingleRatingWrapper.appendChild(reviewSingleRating);
+  reviewSingleRatingWrapper.appendChild(reviewSingleStarWrapper);
   reviewSingleElement.appendChild(reviewSingleDeleteButton);
 
   return reviewSingleElement;
