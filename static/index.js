@@ -44,12 +44,12 @@ function saveReviews(reviews) {
 
 function addReview() {
   const reviewInput = document.getElementById('movie-review');
-  const newReviewContent = reviewInput.value;
+  const newReviewContent = reviewInput?.value;
 
   const reviewRadio = document.querySelector('input[name="rating"]:checked');
-  const newReviewValue = reviewRadio.value;
+  const newReviewValue = reviewRadio?.value;
 
-  if (!newReviewContent) {
+  if (!newReviewContent || !newReviewValue) {
     return;
   }
   const newReview = {
