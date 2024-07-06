@@ -74,6 +74,16 @@ main {
   margin-block-end: 2rem;
 }
 
+.movie__rating {
+  order: 4;
+
+  font-size: 1.5rem;
+  color: var(--color-purple-400);
+
+  margin-block: 2rem;
+  padding-inline: 1.5rem;
+}
+
 .review__form {
   display: flex;
   flex-direction: column;

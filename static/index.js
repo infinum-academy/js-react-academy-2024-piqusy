@@ -8,6 +8,8 @@ function renderReviews(reviews) {
     const reviewSingleElement = createReviewElement(review);
     reviewList.appendChild(reviewSingleElement);
   });
+
+  getAverageRating(reviews);
 }
 
 function createReviewElement(review) {
@@ -64,7 +66,7 @@ function addReview() {
   }
   const newReview = {
     content: newReviewContent,
-    rating: newReviewValue
+    rating: newReviewValue,
   };
 
   reviews.push(newReview);
@@ -74,6 +76,14 @@ function addReview() {
   reviewRadio.checked = false;
 
   saveReviews(reviews);
+}
+
+function getAverageRating(reviews) {
+  const ratings = reviews.map((review) => parseInt(review.rating));
+  const averageRating = ratings.reduce((acc, rating) => acc + rating, 0) / ratings.length;
+  const movieRatingElement = document.getElementById('movie-rating');
+  movieRatingElement.innerHTML = `Average rating: ${averageRating.toFixed(0)} / 5`;
+
 }
 
 reviews = loadReviews();
