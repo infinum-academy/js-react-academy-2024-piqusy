@@ -22,8 +22,18 @@ function createReviewElement(review) {
   reviewSingleRating.classList.add('review__rating');
   reviewSingleRating.textContent = `Rating: ${review.rating} / 5`;
 
+  const reviewSingleDeleteButton = document.createElement('button');
+  reviewSingleDeleteButton.classList.add('review__delete');
+  reviewSingleDeleteButton.textContent = 'Delete';
+  reviewSingleDeleteButton.addEventListener('click', () => {
+    reviews = reviews.filter((r) => r !== review);
+    renderReviews(reviews);
+    saveReviews(reviews);
+  });
+
   reviewSingleElement.appendChild(reviewSingleComment);
   reviewSingleElement.appendChild(reviewSingleRating);
+  reviewSingleElement.appendChild(reviewSingleDeleteButton);
 
   return reviewSingleElement;
 }

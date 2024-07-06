@@ -99,3 +99,8 @@ main {
 .review__rating {
   margin-block-start: 2rem;
 }
+
+.review__delete {
+  display: block;
+  margin-inline-start: auto;
+}
