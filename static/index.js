@@ -29,12 +29,13 @@ function createReviewElement(review) {
 
   const reviewSingleStarWrapper = document.createElement('div');
   reviewSingleStarWrapper.classList.add('review__star-wrapper');
+  reviewSingleStarWrapper.classList.add('rating__star-wrapper');
 
   for (let i = 0; i < 5; i++) {
     const star = document.createElement('span');
     star.classList.add('rating__star');
     if (i < review.rating) {
-      star.classList.add('review__star--active');
+      star.classList.add('rating__star--active');
     }
     reviewSingleStarWrapper.appendChild(star);
   }
@@ -101,6 +102,16 @@ function getAverageRating(reviews) {
   const movieRatingElement = document.getElementById('movie-rating');
   movieRatingElement.innerHTML = `Average rating: ${averageRating.toFixed(0)} / 5`;
 
+  const starWrapper = document.getElementById('movie-rating-stars');
+  starWrapper.innerHTML = '';
+  for (let i = 0; i < 5; i++) {
+    const star = document.createElement('span');
+    star.classList.add('rating__star');
+    if (i < averageRating.toFixed(0)) {
+      star.classList.add('rating__star--active');
+    }
+    starWrapper.appendChild(star);
+  }
 }
 
 reviews = loadReviews();

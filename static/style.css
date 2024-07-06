@@ -83,6 +83,13 @@ main {
   padding-inline: 1.5rem;
 }
 
+.movie__rating-stars {
+  order: 5;
+
+  padding-inline: 1.5rem;
+  margin-block-end: 2rem;
+}
+
 .review__form {
   display: flex;
   flex-direction: column;
@@ -112,15 +119,6 @@ main {
   gap: 4px;
 
   margin-block-start: 2rem;
-}
-
-.review__star-wrapper {
-  display: flex;
-  gap: 4px;
-}
-
-.review__star--active {
-  --star-color: var(--star-color-hover);
 }
 
 .review__delete {

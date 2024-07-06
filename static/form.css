@@ -44,6 +44,15 @@ textarea::placeholder {
   --star-color: var(--star-color-hover);
 }
 
+.rating__star-wrapper {
+  display: flex;
+  gap: 4px;
+}
+
+.rating__star--active {
+  --star-color: var(--star-color-hover);
+}
+
 .rating__number {
   block-size: 0;
   inline-size: 0;
