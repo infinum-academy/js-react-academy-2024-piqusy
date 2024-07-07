@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem;
+  padding: 3rem;
   min-height: 100vh;
+
+  background-color: var(--color-black);
+
+  @media (width > 768px) {
+    padding: 6rem;
+  }
 }
