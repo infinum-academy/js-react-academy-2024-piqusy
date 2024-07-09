@@ -1,12 +1,12 @@
 import { Button, Card, CardBody, chakra, FormLabel, Heading, Radio, RadioGroup, Stack, Textarea } from '@chakra-ui/react';
 import { useState } from 'react';
 
-export const ReviewForm = () => {
-  const [value, setValue] = useState('1');
+interface IReviewFormProps {
+  addShowReview: () => void;
+}
 
-  function addShowReview() {
-    console.log('hi');
-  }
+export const ReviewForm = ({ addShowReview }: IReviewFormProps) => {
+  const [rating, setRating] = useState('1');
 
   return (
     <Card w="100%">
@@ -24,7 +24,7 @@ export const ReviewForm = () => {
           <FormLabel marginTop={8} htmlFor="rating">
             Rating
           </FormLabel>
-          <RadioGroup onChange={setValue} value={value} name="rating">
+          <RadioGroup onChange={setRating} value={rating} name="rating">
             <Stack direction="row">
               <Radio value="1">1</Radio>
               <Radio value="2">2</Radio>
