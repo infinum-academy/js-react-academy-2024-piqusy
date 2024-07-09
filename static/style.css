@@ -1,0 +1,129 @@
+@import 'form.css';
+@import 'rating-star.css';
+
+:root {
+  --color-white: #ffffff;
+  --color-purple-800: #20004f;
+  --color-purple-600: #371587;
+  --color-purple-400: #3f01b1;
+  --color-purple-50: #ad91e1;
+
+  --border-radius-s: 0.5rem;
+  --border-radius-m: 1rem;
+
+  --star-color: #dddddd;
+  --star-color-hover: #ffa500;
+}
+
+body {
+  background-color: var(--color-purple-800);
+  font-family: 'Roboto', 'Arial', sans-serif;
+  line-height: 1.25;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  max-width: 80%;
+  margin: 0 auto 4rem;
+}
+
+.site__title {
+  color: var(--color-white);
+}
+
+.movie__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  color: var(--purple-400);
+  background-color: var(--color-white);
+
+  border-radius: var(--border-radius-m);
+}
+
+.movie__title {
+  order: 2;
+
+  padding-inline: 1.5rem;
+
+  color: var(--color-purple-400);
+}
+
+.movie__description {
+  order: 3;
+
+  color: var(--color-purple-400);
+}
+
+.movie__description p {
+  margin-block-end: 2rem;
+  padding-inline: 1.5rem;
+}
+
+.movie__poster {
+  order: 1;
+
+  max-width: 100%;
+
+  margin-block-end: 2rem;
+}
+
+.movie__rating {
+  order: 4;
+
+  font-size: 1.5rem;
+  color: var(--color-purple-400);
+
+  margin-block: 2rem;
+  padding-inline: 1.5rem;
+}
+
+.movie__rating-stars {
+  order: 5;
+
+  padding-inline: 1.5rem;
+  margin-block-end: 2rem;
+}
+
+.review__form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+.review__listing {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.review__single {
+  white-space: pre-wrap;
+  color: var(--color-white);
+  background-color: var(--color-purple-600);
+
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius-m);
+}
+
+.review__rating-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+
+  margin-block-start: 2rem;
+}
+
+.review__delete {
+  display: block;
+
+  margin-block-start: 2rem;
+  margin-inline-start: auto;
+}

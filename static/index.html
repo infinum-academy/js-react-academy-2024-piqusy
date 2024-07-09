@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movies APP</title>
+    <link href="./../static/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <h1 class="site__title">Movies APP</h1>
+
+      <header class="movie__wrapper">
+        <h2 class="movie__title">The Matrix</h2>
+        <div class="movie__description">
+          <p>"The Matrix," directed by the Wachowskis, is a 1999 science fiction film that explores themes of reality, freedom, and control. The story follows Thomas Anderson (Keanu Reeves), a computer hacker known by the alias "Neo." Neo is disillusioned with his mundane life and haunted by mysterious online encounters with a figure named Morpheus (Laurence Fishburne), who reveals a shocking truth: the world as Neo knows it is a simulated reality called the Matrix.</p>
+
+          <p>Morpheus explains that in reality, intelligent machines have enslaved humanity, using their bodies as an energy source while keeping their minds imprisoned in the Matrix. Neo learns he is "The One," prophesied to liberate humanity from the machines. Morpheus and his crew, including the skilled fighter Trinity (Carrie-Anne Moss), train Neo to manipulate the Matrix's code, giving him superhuman abilities within the simulation.</p>
+
+          <p>The group battles against the Matrix's sentient security programs, known as Agents, led by the relentless Agent Smith (Hugo Weaving). As Neo's powers grow, he confronts his destiny, culminating in a climactic showdown with Agent Smith. Neo ultimately embraces his role as humanity's savior, heralding the beginning of the fight to free humanity from the Matrix's grip. The film ends with Neo's promise to expose the truth and lead the resistance against the machines.</p>
+        </div>
+
+        <div id="movie-rating" class="movie__rating"></div>
+        <div id="movie-rating-stars" class="movie__rating-stars rating__star-wrapper"></div>
+
+        <img class="movie__poster" src="./../assets/matrix.png" alt="IMDb Logo" />
+      </header>
+
+      <section>
+        <h2 class="site__title">Movie Reviews</h2>
+
+        <form class="review__form">
+          <textarea id="movie-review" name="movie-review" required placeholder="Add review"></textarea>
+
+          <div class="rating__labels">
+
+            <label class="rating__label">
+              <span class="rating__star" aria-hidden="true"></span>
+              <div class="rating__number">5</div>
+              <input class="rating__radio" type="radio" id="rating-5" name="rating" value="5" />
+            </label>
+
+            <label class="rating__label">
+              <span class="rating__star" aria-hidden="true"></span>
+              <div class="rating__number">4</div>
+              <input class="rating__radio" type="radio" id="rating-4" name="rating" value="4" />
+            </label>
+
+            <label class="rating__label">
+              <span class="rating__star" aria-hidden="true"></span>
+              <div class="rating__number">3</div>
+              <input class="rating__radio" type="radio" id="rating-3" name="rating" value="3" />
+            </label>
+
+            <label class="rating__label">
+              <span class="rating__star" aria-hidden="true"></span>
+              <div class="rating__number">2</div>
+              <input class="rating__radio" type="radio" id="rating-2" name="rating" value="2" />
+            </label>
+
+            <label class="rating__label">
+              <span class="rating__star" aria-hidden="true"></span>
+              <div class="rating__number">1</div>
+              <input class="rating__radio" type="radio" id="rating-1" name="rating" value="1" />
+            </label>
+
+          </div>
+
+          <button onclick="addReview()">Post</button>
+        </form>
+      </section>
+
+      <section id="review-listing" class="review__listing">
+
+        <div class="review__single">
+          <div class="review__comment">
+            <p>Nisi velit sint fugiat tempor ut nulla et enim voluptate adipisicing voluptate do enim. Ipsum reprehenderit veniam reprehenderit irure Lorem id deserunt aute deserunt non. Fugiat eu non officia. Anim esse nisi cillum culpa Lorem tempor sit excepteur enim enim aliqua nulla id laborum ut. Elit labore duis ipsum aliqua esse minim. Sit ex Lorem laborum ullamco mollit magna irure pariatur consectetur quis eu eiusmod nostrud enim. Laborum nisi velit amet ea consectetur irure est.</p>
+
+            <p>Ullamco occaecat occaecat reprehenderit non. Lorem non reprehenderit velit aliquip velit eu. Aliqua commodo voluptate non pariatur est aute adipisicing sunt. Occaecat commodo commodo ex. Velit dolore ea esse sit officia laborum proident deserunt.</p>
+          </div>
+
+          <div class="review__rating">
+            <p>Rating: <span>2/5</span></p>
+          </div>
+        </div>
+
+        <div class="review__single">
+          <div class="review__comment">
+            <p>Ex nulla irure proident minim quis excepteur sit sit anim exercitation tempor est tempor minim. Magna velit adipisicing aliqua ut fugiat duis ullamco ullamco tempor mollit dolor nulla laborum pariatur ex. Proident occaecat magna ad sint ullamco veniam pariatur nulla. Do proident irure cillum. Ipsum sint reprehenderit do eu aute. Dolore duis reprehenderit officia nostrud occaecat est adipisicing aliquip commodo veniam cillum. Velit minim fugiat ipsum in sit minim incididunt velit amet qui id. Pariatur aliquip ea et sit ea nostrud exercitation labore sint esse.</p>
+
+            <p>Commodo cillum cillum eiusmod tempor consequat sint labore nisi proident officia cupidatat aute. Anim ea dolor eu tempor proident. Proident enim velit aliquip fugiat amet aliquip id amet labore. Labore dolore tempor aute. Sit esse sint sint id irure exercitation duis.</p>
+          </div>
+
+          <div class="review__rating">
+            <p>Rating: <span>4/5</span></p>
+          </div>
+        </div>
+
+        <div class="review__single">
+          <div class="review__comment">
+            <p>Ipsum anim exercitation commodo mollit sunt ut. Et magna minim consectetur duis Lorem et esse est aliquip deserunt. Deserunt nisi laborum aute nulla. Excepteur et aliqua dolor quis tempor et nostrud enim velit eu labore. Velit nostrud ad ut aliqua incididunt minim excepteur consectetur fugiat ea ex id laboris. Cillum adipisicing esse nostrud veniam sit nisi mollit velit irure eiusmod et magna commodo. Tempor culpa minim irure aute Lorem consequat minim esse pariatur aliqua qui veniam.</p>
+          </div>
+
+          <div class="review__rating">
+            <p>Rating: <span>5/5</span></p>
+          </div>
+        </div>
+
+        <div class="review__single">
+          <div class="review__comment">
+            <p>Lorem dolore duis enim ad quis mollit ex nulla sint nisi ullamco. Aliqua anim laboris adipisicing ex ad ex. Nisi reprehenderit ea dolor dolor. Et pariatur mollit eiusmod nostrud cupidatat veniam. Ex cillum ipsum deserunt dolore nisi nostrud minim ad duis. Nostrud cillum mollit deserunt dolore est excepteur nostrud adipisicing labore reprehenderit nisi deserunt aliqua aliquip.</p>
+          </div>
+
+          <div class="review__rating">
+            <p>Rating: <span>3/5</span></p>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    <script src="./../static/index.js"></script>
+  </body>
+</html>
