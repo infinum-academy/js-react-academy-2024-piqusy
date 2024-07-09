@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, FormControl, FormLabel, Heading, Radio, RadioGroup, Stack, Textarea } from '@chakra-ui/react';
+import { Button, Card, CardBody, chakra, FormLabel, Heading, Radio, RadioGroup, Stack, Textarea } from '@chakra-ui/react';
 import { useState } from 'react';
 
 export const ReviewForm = () => {
@@ -15,7 +15,7 @@ export const ReviewForm = () => {
           Submit review
         </Heading>
 
-        <FormControl>
+        <chakra.form>
           <FormLabel marginTop={8} htmlFor="comment">
             Comment
           </FormLabel>
@@ -37,7 +37,7 @@ export const ReviewForm = () => {
           <Button onClick={addShowReview as any} marginTop={8}>
             Add revirew
           </Button>
-        </FormControl>
+        </chakra.form>
       </CardBody>
     </Card>
   );
