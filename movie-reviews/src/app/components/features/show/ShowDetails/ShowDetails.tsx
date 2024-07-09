@@ -1,6 +1,10 @@
 import { Card, CardBody, CardHeader, Heading, Image, Text, Flex } from '@chakra-ui/react';
 
-export const ShowDetails = ({ title, description, averageRating, imageUrl }: IShow) => {
+interface IShowDetailsProps {
+  show: IShow;
+}
+
+export const ShowDetails = ({ title, description, averageRating, imageUrl }: IShowDetailsProps) => {
   title = 'The Matrix';
   description = 'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.';
   imageUrl = '/assets/matrix.png';
@@ -12,7 +16,7 @@ export const ShowDetails = ({ title, description, averageRating, imageUrl }: ISh
       </CardHeader>
 
       <CardBody>
-        <Flex direction='column' gap='2'>
+        <Flex direction="column" gap="2">
           <Heading>{title}</Heading>
           <Text className="description">{description}</Text>
           <div className="rating">{averageRating ?? 'No rating'}</div>

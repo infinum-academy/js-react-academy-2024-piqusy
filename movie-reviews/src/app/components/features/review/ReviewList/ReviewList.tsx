@@ -1,14 +1,18 @@
 import { Heading, Stack } from '@chakra-ui/react';
 import { ReviewItem } from '../ReviewItem/ReviewItem';
 
-export const ReviewList = ({ reviews }: IReviews) => {
-  const reviewList = reviews.map((review) => <ReviewItem key={review.email} {...review} />);
+interface IReviewListProps {
+  reviews: IReviewList;
+}
 
+export const ReviewList = ({ reviews }: IReviewListProps) => {
   return (
     <Stack spacing={4} w="100%">
       <Heading color="white">Review List</Heading>
       <Stack spacing={4} w="100%">
-        {reviewList}
+        {reviews.map((review) => (
+          <ReviewItem key={review.email} {...review} />
+        ))}
       </Stack>
     </Stack>
   );

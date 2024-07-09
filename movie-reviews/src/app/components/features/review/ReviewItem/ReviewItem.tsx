@@ -1,6 +1,12 @@
 import { Card, CardBody, Text, Image, Flex } from '@chakra-ui/react';
 
-export const ReviewItem = ({ email, avatar, rating, comment }: IReview) => {
+interface IReviewProps {
+  review: IReview;
+}
+
+export const ReviewItem = (review: IReviewProps) => {
+  const { avatar, email, comment, rating } = review;
+
   return (
     <Card w="100%">
       <CardBody>
