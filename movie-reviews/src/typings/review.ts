@@ -1,5 +1,5 @@
-interface IReviews {
-  reviews: IReview[];
+interface IReviewList {
+  reviews: Array<IReview>;
 }
 
 interface IReview {
