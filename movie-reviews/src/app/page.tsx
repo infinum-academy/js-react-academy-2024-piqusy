@@ -1,8 +1,8 @@
 'use client';
 
 import { Box, Container, Heading, VStack } from '@chakra-ui/react';
-import { ShowDetails } from './components/features/shows/ShowDetails';
-import { ShowReviewSection } from './components/features/shows/ShowReviewSection';
+import { ShowDetails } from './components/features/show/ShowDetails/ShowDetails';
+import { ShowReviewSection } from './components/features/show/ShowReviewSection/ShowReviewSection';
 import '/styles/global.css';
 
 export default function Home() {

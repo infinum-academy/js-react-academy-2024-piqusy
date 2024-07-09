@@ -1,5 +1,5 @@
 import { Heading, Stack } from '@chakra-ui/react';
-import { ReviewItem } from './ReviewItem';
+import { ReviewItem } from '../ReviewItem/ReviewItem';
 
 export const ReviewList = ({ reviews }: IReviews) => {
   const reviewList = reviews.map((review) => <ReviewItem key={review.email} {...review} />);
