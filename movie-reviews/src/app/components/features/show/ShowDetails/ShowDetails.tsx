@@ -1,4 +1,4 @@
-import { Card, CardBody, CardHeader, Heading, Image, Text, Flex } from '@chakra-ui/react';
+import { Card, CardBody, CardHeader, Heading, Image, Text, Flex, Box } from '@chakra-ui/react';
 
 interface IShowDetailsProps {
   show: IShow;
@@ -19,7 +19,7 @@ export const ShowDetails = ({ title, description, averageRating, imageUrl }: ISh
         <Flex direction="column" gap="2">
           <Heading>{title}</Heading>
           <Text className="description">{description}</Text>
-          <div className="rating">{averageRating ?? 'No rating'}</div>
+          <Box className="rating">{averageRating ?? 'No rating'}</Box>
         </Flex>
       </CardBody>
     </Card>
