@@ -1,10 +1,10 @@
-interface IReviewList {
+export interface IReviewList {
   reviews: Array<IReview>;
 }
 
-interface IReview {
-  email?: string;
+export interface IReview {
   avatar?: string | undefined;
-  rating?: number;
+  email?: string;
   comment?: string;
+  rating?: number;
 }

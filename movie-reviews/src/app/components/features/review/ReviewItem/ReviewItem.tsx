@@ -1,10 +1,11 @@
 import { Card, CardBody, Text, Image, Flex } from '@chakra-ui/react';
+import { IReview } from '../../../../../typings/review';
 
-interface IReviewProps {
+interface IReviewItemProps {
   review: IReview;
 }
 
-export const ReviewItem = (review: IReviewProps) => {
+export const ReviewItem = ({ review }: IReviewItemProps) => {
   const { avatar, email, comment, rating } = review;
 
   return (

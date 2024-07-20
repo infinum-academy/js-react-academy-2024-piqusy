@@ -1,8 +1,9 @@
 import { Button, Card, CardBody, chakra, FormLabel, Heading, Radio, RadioGroup, Stack, Textarea } from '@chakra-ui/react';
+import { IReview } from '../../../../../typings/review';
 import { useState } from 'react';
 
 interface IReviewFormProps {
-  addShowReview: () => void;
+  addShowReview: (reivew: IReview) => void;
 }
 
 export const ReviewForm = ({ addShowReview }: IReviewFormProps) => {

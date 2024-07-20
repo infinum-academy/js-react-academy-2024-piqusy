@@ -1,4 +1,5 @@
 import { Card, CardBody, CardHeader, Heading, Image, Text, Flex, Box } from '@chakra-ui/react';
+import { IShow } from '../../../../../typings/show';
 
 interface IShowDetailsProps {
   show: IShow;
