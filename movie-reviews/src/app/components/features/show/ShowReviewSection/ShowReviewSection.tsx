@@ -1,9 +1,9 @@
 import { ReviewForm } from '../../review/ReviewForm/ReviewForm';
 import { ReviewList } from '../../review/ReviewList/ReviewList';
-import { ReviewContainer } from '../../review/ReviewContainer/ReviewContainer';
+import { ReviewMockList } from '../../review/ReviewMockList/ReviewMockList';
+const reviews = ReviewMockList;
 
 export const ShowReviewSection = () => {
-  const reviews = ReviewContainer;
 
   return (
     <>
