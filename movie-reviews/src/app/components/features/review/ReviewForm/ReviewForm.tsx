@@ -9,6 +9,19 @@ interface IReviewFormProps {
 export const ReviewForm = ({ addShowReview }: IReviewFormProps) => {
   const [rating, setRating] = useState('1');
 
+  const onSubmit = (e: any) => {
+    e.preventDefault();
+
+    const commentEl = document.getElementById('comment') as HTMLInputElement;
+
+    const newReview: IReview = {
+      comment: commentEl.value ?? '',
+      rating: parseInt(rating),
+    };
+
+    addShowReview(newReview);
+  };
+
   return (
     <Card w="100%">
       <CardBody>
@@ -25,18 +38,18 @@ export const ReviewForm = ({ addShowReview }: IReviewFormProps) => {
           <FormLabel marginTop={8} htmlFor="rating">
             Rating
           </FormLabel>
-          <RadioGroup onChange={setRating} value={rating} name="rating">
+          <RadioGroup onChange={setRating} value={rating} name="rating" id="rating">
             <Stack direction="row">
-              <Radio value="1">1</Radio>
-              <Radio value="2">2</Radio>
-              <Radio value="3">3</Radio>
-              <Radio value="4">4</Radio>
-              <Radio value="5">5</Radio>
+              {[...Array(5)].map((_, i) => (
+                <Radio key={i} value={String(i + 1)}>
+                  {i + 1}
+                </Radio>
+              ))}
             </Stack>
           </RadioGroup>
 
-          <Button onClick={addShowReview as any} marginTop={8}>
-            Add revirew
+          <Button onClick={onSubmit} marginTop={8}>
+            Add review
           </Button>
         </chakra.form>
       </CardBody>

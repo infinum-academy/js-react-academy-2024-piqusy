@@ -8,12 +8,14 @@ interface IReviewListProps {
 }
 
 export const ReviewList = ( { reviewList }: IReviewListProps) => {
+  reviewList = reviewList ?? ReviewMockList;
+
   return (
     <Stack spacing={4} w="100%">
       <Heading color="white">Review List</Heading>
       <Stack spacing={4} w="100%">
-        {reviews.map((review) => (
-          <ReviewItem key={review.email} {...review} />
+        {reviewList.reviews.map((review: IReview, i) => (
+          <ReviewItem key={i} review={review} />
         ))}
       </Stack>
     </Stack>

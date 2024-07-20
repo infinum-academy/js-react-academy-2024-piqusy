@@ -5,10 +5,8 @@ interface IShowDetailsProps {
   show: IShow;
 }
 
-export const ShowDetails = ({ title, description, averageRating, imageUrl }: IShowDetailsProps) => {
-  title = 'The Matrix';
-  description = 'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.';
-  imageUrl = '/assets/matrix.png';
+export const ShowDetails = ({ show }: IShowDetailsProps) => {
+  const { title, description, imageUrl, averageRating } = show;
 
   return (
     <Card>
