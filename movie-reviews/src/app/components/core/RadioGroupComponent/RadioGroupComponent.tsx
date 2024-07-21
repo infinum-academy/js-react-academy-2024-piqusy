@@ -1,4 +1,6 @@
-import { FormLabel, Radio, RadioGroup, Stack } from '@chakra-ui/react';
+import { FormLabel, Radio, RadioGroup, Stack, VisuallyHidden } from '@chakra-ui/react';
+import { StarIcon } from '@chakra-ui/icons';
+import './radio-styles.css';
 
 export const RadioGroupComponent = ({ rating, onChange }: any) => {
   return (
@@ -7,11 +9,12 @@ export const RadioGroupComponent = ({ rating, onChange }: any) => {
         Rating
       </FormLabel>
 
-      <RadioGroup onChange={onChange} value={rating} name="rating" id="rating" className='radio-group'>
-        <Stack direction="row">
-          {[...Array(5)].map((_, i) => (
-            <Radio key={i} value={String(i + 1)} className='radio-item'>
-              {i + 1}
+      <RadioGroup onChange={onChange} value={rating} name="rating" id="rating">
+        <Stack direction="row-reverse" justifyContent="flex-end" gap={1}>
+          {Array.from({ length: 5 }, (_, i) => (
+            <Radio key={i} value={String(5 - i)}>
+              <StarIcon color="gray.300" boxSize={6} className="rating-star"/>
+              <VisuallyHidden>{5 - i}</VisuallyHidden>
             </Radio>
           ))}
         </Stack>
