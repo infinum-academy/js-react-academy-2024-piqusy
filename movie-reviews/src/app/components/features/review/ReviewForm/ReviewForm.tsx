@@ -36,7 +36,7 @@ export const ReviewForm = ({ addShowReview }: IReviewFormProps) => {
           </FormLabel>
           <Textarea placeholder="Add comment" id="comment" name="comment" />
 
-          <RadioGroupComponent rating={ratingValue} onChange={setRatingValue} />
+          <RadioGroupComponent label="Rating" value={ratingValue} onChange={setRatingValue} />
 
           <Button onClick={onSubmit} marginTop={8}>
             Add review
