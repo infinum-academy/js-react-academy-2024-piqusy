@@ -1,4 +1,5 @@
-import { Button, Card, CardBody, chakra, FormLabel, Heading, Radio, RadioGroup, Stack, Textarea } from '@chakra-ui/react';
+import { Button, Card, CardBody, chakra, FormLabel, Heading, Textarea } from '@chakra-ui/react';
+import { RadioGroupComponent } from '../../../core/RadioGroupComponent/RadioGroupComponent';
 import { IReview } from '../../../../../typings/review';
 import { useState } from 'react';
 
@@ -7,7 +8,7 @@ interface IReviewFormProps {
 }
 
 export const ReviewForm = ({ addShowReview }: IReviewFormProps) => {
-  const [rating, setRating] = useState('1');
+  const [ratingValue, setRatingValue] = useState('1');
 
   const onSubmit = (e: any) => {
     e.preventDefault();
@@ -16,7 +17,7 @@ export const ReviewForm = ({ addShowReview }: IReviewFormProps) => {
 
     const newReview: IReview = {
       comment: commentEl.value ?? '',
-      rating: parseInt(rating),
+      rating: parseInt(ratingValue),
     };
 
     addShowReview(newReview);
@@ -35,18 +36,7 @@ export const ReviewForm = ({ addShowReview }: IReviewFormProps) => {
           </FormLabel>
           <Textarea placeholder="Add comment" id="comment" name="comment" />
 
-          <FormLabel marginTop={8} htmlFor="rating">
-            Rating
-          </FormLabel>
-          <RadioGroup onChange={setRating} value={rating} name="rating" id="rating">
-            <Stack direction="row">
-              {[...Array(5)].map((_, i) => (
-                <Radio key={i} value={String(i + 1)}>
-                  {i + 1}
-                </Radio>
-              ))}
-            </Stack>
-          </RadioGroup>
+          <RadioGroupComponent rating={ratingValue} onChange={setRatingValue} />
 
           <Button onClick={onSubmit} marginTop={8}>
             Add review
