@@ -1,0 +1,10 @@
+.chakra-radio__control {
+  display: none !important;
+}
+
+.chakra-radio:hover .rating-star,
+.chakra-radio:hover ~ .chakra-radio .rating-star,
+.chakra-radio:has(:checked) .rating-star,
+.chakra-radio:has(:checked) ~ .chakra-radio .rating-star {
+  color: var(--chakra-colors-yellow-500);
+}
