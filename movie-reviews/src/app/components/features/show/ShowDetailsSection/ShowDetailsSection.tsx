@@ -12,7 +12,7 @@ import { useState } from 'react';
 
 const reviews = ReviewMockList;
 
-export const ShowReviewSection = () => {
+export const ShowDetailsSection = () => {
   const [reviewsList, setReviewsList] = useState<{reviews: IReview[]}>(reviews);
 
   const showDetails = {

@@ -1,7 +1,7 @@
 'use client'
 
-import { ShowReviewSection } from "./components/features/show/ShowReviewSection/ShowReviewSection";
+import { ShowDetailsSection } from "./components/features/show/ShowDetailsSection/ShowDetailsSection";
 
 export default function Home() {
-	return <ShowReviewSection />;
+	return <ShowDetailsSection />;
 }
