@@ -6,7 +6,7 @@ import {
   Button,
   CardBody,
 } from "@chakra-ui/react";
-import { ShowsListTable } from "../ShowsListTable/ShowsListTable";
+import { ShowsListGrid } from "../ShowsListGrid/ShowsListGrid";
 
 export const ShowsList = () => {
   return (
@@ -18,8 +18,8 @@ export const ShowsList = () => {
         </Flex>
       </CardHeader>
       <CardBody>
-        <ShowsListTable 
-          showsList={[{ title: "Test", id: "1", showsList: [] }]}
+        <ShowsListGrid
+          showsList={[ showDetails ]}
         />
       </CardBody>
     </Card>
